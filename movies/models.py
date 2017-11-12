@@ -9,7 +9,7 @@ class Movie(models.Model):
     title = models.CharField(max_length=256)
     description = models.TextField()
     director = models.ForeignKey(Person, related_name='%(class)s_director')
-    actors = models.ManyToManyField(Person, through='Role', related_name='%(class)s_actors')
+    actors = models.ManyToManyField(Person, through='Role', related_name='%(class)s_actor')
     year = models.IntegerField()
 
 
